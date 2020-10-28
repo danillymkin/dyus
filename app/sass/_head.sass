@@ -1,0 +1,161 @@
+.head
+    width: 100%
+    padding-top: 30px
+    padding-bottom: 140px
+    background-size: cover
+    background-repeat: no-repeat
+    background: radial-gradient(59.31% 59.31% at 50% 40.69%,rgba(40,43,52,.65) 24.41%,#282b34 100%),64% 22% / cover url(../images/dest/baner-bg.jpg) no-repeat
+
+    &-header
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        &__content
+            display: flex
+            align-items: center
+
+        &__company
+            margin-left: 2px
+            display: flex
+            align-items: center
+
+            &-name
+                margin-left: 40px
+                font-size: 12px
+                line-height: 130%
+                max-width: 150px
+                color: rgba(255, 255, 255, 0.5)
+                position: relative
+                top: -1px
+
+                &::after
+                    content: ''
+                    position: absolute
+                    height: 32px
+                    width: 1px
+                    background-color: rgba(255, 255, 255, 0.3)
+                    left: -20px
+                    top: 50%
+                    transform: translate(0, -50%)
+
+        &__nav
+            display: flex
+            position: relative
+            top: 1px
+            margin-left: 81px
+
+            &-link
+                font-size: 14px
+                line-height: 100%
+                color: #FFFFFF
+                text-decoration: none
+
+                &:hover
+                    color: #FFFFFF
+                    text-decoration-color: #ffffff
+
+
+                &:not(:last-child)
+                    margin-right: 41px
+
+        &__call-btn
+            position: relative
+            left: 8px
+            max-width: 285px
+            width: 100%
+
+        &__burger
+            cursor: pointer
+            display: none
+
+    &-content
+        margin-top: 122px
+        padding-left: 2px
+
+        &__offer
+            font-weight: 500
+            max-width: 671px
+            font-size: 42px
+            line-height: 120%
+            color: #FFFFFF
+            margin-bottom: 0
+
+        &__text
+            margin-top: 30px
+            max-width: 353px
+            font-size: 18px
+            line-height: 135%
+            color: rgba(255, 255, 255, 0.8)
+
+        &__action-btns
+            display: flex
+            position: relative
+            z-index: 1
+            margin-top: 43px
+
+            &-main
+                max-width: 285px
+                width: 100%
+                margin-right: 39px
+
+            &-second
+                max-width: 313px
+                width: 100%
+                font-size: 16px
+                padding-top: 20px
+                padding-bottom: 21px
+
+@media screen and (max-width: 1000px)
+    .head
+
+        &-header
+
+            &__call-btn,
+            &__nav
+                display: none
+
+            &__burger
+                display: block
+
+
+@media screen and (max-width: 720px)
+    .head
+
+        &-content
+
+            &__offer
+                font-size: 38px
+                line-height: 120%
+
+@media screen and (max-width: 600px)
+    .head
+        padding-bottom: 20px
+
+        &-content
+
+            &__offer
+                font-size: 22px
+                line-height: 120%
+
+            &__text
+                font-size: 16px
+                line-height: 135%
+                margin-top: 15px
+
+            &__action-btns
+                flex-direction: column
+                margin-top: 35px
+                max-width: 285px
+                width: 100%
+                margin-left: auto
+                margin-right: auto
+
+                &-main,
+                &-second
+                    font-size: 14px
+                    line-height: 100%
+
+                &-second
+                    margin-top: 20px

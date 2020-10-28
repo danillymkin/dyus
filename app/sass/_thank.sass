@@ -1,0 +1,125 @@
+.thank
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    padding-top: 30px
+    background: radial-gradient(56.06% 56.06% at 50% 43.94%, rgba(40, 43, 52, 0) 0%, #282B34 100%), center / cover url("../images/dest/thank-bg.jpg")
+
+    &-header
+        width: 100%
+
+        &__content
+            display: flex
+            align-items: center
+
+        &__company
+            margin-left: 2px
+            display: flex
+            align-items: center
+
+            &-name
+                margin-left: 40px
+                font-size: 12px
+                line-height: 130%
+                max-width: 150px
+                color: rgba(255, 255, 255, 0.5)
+                position: relative
+                top: -1px
+
+                &::after
+                    content: ''
+                    position: absolute
+                    height: 32px
+                    width: 1px
+                    background-color: rgba(255, 255, 255, 0.3)
+                    left: -20px
+                    top: 50%
+                    transform: translate(0, -50%)
+
+    &-content
+        margin-top: 170px
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        z-index: 5
+
+        &::after
+            content: ''
+            top: -150px
+            position: absolute
+            width: 673px
+            height: 673px
+            border-radius: 50%
+            z-index: 1
+            background: radial-gradient(118.57% 118.57% at 50% 50%, rgba(218, 170, 114, 0.105) 14.66%, rgba(218, 170, 114, 0) 37.85%)
+
+        &__img
+            margin-bottom: 40px
+            z-index: 5
+
+        &__title
+            margin-bottom: 20px
+            margin-top: 0
+            font-weight: 500
+            max-width: 466px
+            font-size: 36px
+            line-height: 125%
+            text-align: center
+            color: #FFFFFF
+            z-index: 5
+
+        &__text
+            margin-top: 0
+            margin-bottom: 80px
+            font-size: 16px
+            line-height: 135%
+            text-align: center
+            color: rgba(255, 255, 255, 0.7)
+            z-index: 5
+
+        &__btn
+            max-width: 285px
+            width: 100%
+            z-index: 5
+
+            &:hover
+                color: #fff
+                text-decoration: none
+
+@media screen and (max-width: 768px)
+    .thank
+
+        &-content
+            margin-top: 232px
+
+            &::after
+                width: 619px
+                height: 619px
+                top: -126px
+
+@media screen and (max-width: 539px)
+    .thank
+
+        &-content
+            margin-top: 137px
+
+            &::after
+                width: 320px
+                height: 320px
+                top: -7px
+
+            &__img
+                margin-bottom: 30px
+
+            &__title
+                line-height: 125%
+                margin-bottom: 15px
+                max-width: 245px
+
+            &__text
+                max-width: 218px
+                margin-bottom: 60px
+
+            &__btn
+                max-width: 290px

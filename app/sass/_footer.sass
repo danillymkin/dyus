@@ -1,0 +1,166 @@
+.footer
+    padding-top: 30px
+    padding-bottom: 30px
+    display: grid
+    justify-content: space-between
+    grid-template-columns: minmax(max-content, max-content) minmax(max-content, max-content) minmax(max-content, max-content) minmax(237px, max-content)
+
+    &-company
+        margin-left: 2px
+        display: flex
+        align-items: center
+
+        &__name
+            margin-left: 40px
+            font-weight: normal
+            font-size: 12px
+            line-height: 130%
+            max-width: 173px
+            color: #222222
+            position: relative
+
+            &::after
+                content: ''
+                position: absolute
+                height: 32px
+                width: 1px
+                background-color: rgba(34, 34, 34, 0.2)
+                left: -20px
+                top: 50%
+                transform: translate(0, -50%)
+
+    &-social
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &__text
+            max-width: 128px
+            display: inline-block
+            margin-right: 20px
+            font-weight: normal
+            font-size: 14px
+            line-height: 130%
+            color: rgba(34, 34, 34, 0.5)
+
+        &__inst
+            margin-right: 15px
+
+    &-phones
+        display: flex
+        align-items: center
+
+        &__phone
+            font-weight: normal
+            font-size: 16px
+            line-height: 100%
+            color: #282B34
+            position: relative
+            
+            &:hover
+                text-decoration: none
+                color: #282B34
+
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                right: 0
+                width: 100%
+                height: 1px
+                background-color: rgba(40, 43, 52, 0.3)
+                bottom: -3px
+
+            &:first-child
+                margin-right: 30px
+
+    &-call-btn
+        width: 237px
+        margin-left: auto
+
+
+@media screen and (max-width: 1140px)
+    .footer
+        grid-template-columns: repeat(2, minmax(max-content, max-content))
+        grid-row-gap: 20px
+
+        &-social
+
+            &__text
+                max-width: 243px
+
+@media screen and (max-width: 660px)
+    .footer
+
+        &-company
+
+            &__logo
+                width: 43px
+                height: 43px
+
+            &__name
+                font-size: 8px
+                max-width: 113px
+                margin-left: 28px
+
+                &::after
+                    left: -14px
+
+        &-social
+
+            &__text
+                font-size: 12px
+                max-width: 114px
+
+        &-call-btn
+            max-width: 237px
+
+        &-phones
+            &__phone
+                font-size: 14px
+
+@media screen and (max-width: 570px)
+    .footer
+
+        &-phones
+            flex-direction: column
+            align-items: flex-start
+
+            &__phone
+
+                &:not(:last-child)
+                    margin-right: 0 !important
+                    margin-bottom: 20px
+
+            
+
+@media screen and (max-width: 450px)
+    .footer
+        grid-template-columns: minmax(max-content, 100%)
+
+        &-social
+            justify-content: flex-start
+            margin-top: 5px
+            margin-bottom: 10px
+
+            &__text
+                font-size: 12px
+                max-width: 214px
+
+        &-phones
+            flex-direction: row
+            width: 100%
+            justify-content: space-between
+
+            &__phone
+                font-size: 14px
+
+                &:not(:last-child)
+                    margin-right: 0 !important
+                    margin-bottom: 0 !important
+
+        &-call-btn
+            margin-right: auto
+            margin-left: 0
+            max-width: 100%
+            width: 100%

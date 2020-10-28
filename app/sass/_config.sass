@@ -1,0 +1,154 @@
+// USER VARIABLES SECTION
+
+$accent: #DAAA72 // Accent Color
+$fontsize: 14px // Body Font Size
+$rubik: 'Rubik', sans-serif
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+button:active, button:focus 
+	outline: none !important
+
+button::-moz-focus-inner
+	border: 0 !important
+
+
+*,
+*::after,
+*::before
+	box-sizing: border-box
+
+body
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 135%
+	overflow-x: hidden
+	padding: 0
+	margin: 0
+	font-family: $rubik
+
+.container
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto
+
+@media screen and (max-width: 1200px)
+	.container
+		padding-left: 15px
+		padding-right: 15px
+
+.btn
+	padding-top: 23px
+	padding-bottom: 23px
+	border: none
+	border-radius: 50px
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	outline: none
+
+.btn--main
+	background: linear-gradient(93.5deg, #DAAB72 15.12%, #E1C097 91.47%)
+	font-weight: 500
+	font-size: 14px
+	line-height: 100%
+	text-transform: uppercase
+	color: #FFFFFF
+	transform-style: preserve-3d
+	position: relative
+	outline: none
+
+	&:hover
+		background: linear-gradient(93.5deg, #CD9D64 15.12%, #D4B48B 91.47%)
+
+
+	&::after
+		content: ''
+		top: 5px
+		left: 0
+		right: 0
+		transform: translateZ(-1px)
+		background: #B98E5A
+		box-shadow: 0px 10px 20px rgba(219, 173, 119, 0.25)
+		border-radius: 50px
+		position: absolute
+		height: 100%
+		width: 100%
+
+.btn--second
+	font-weight: 500
+	font-size: 14px
+	line-height: 100%
+	text-transform: uppercase
+	color: rgba(255, 255, 255, 0.5)
+	background-color: rgba(0, 0, 0, 0)
+	border: 2px solid rgba(255, 255, 255, 0.3)
+	outline: none
+	font-weight: 500
+	font-size: 16px
+	line-height: 100%
+	text-transform: uppercase
+	color: #FFFFFF
+	box-sizing: border-box
+	position: relative
+	transform-style: preserve-3d
+
+
+	// &:hover
+	// 	color: #ffffff
+	// 	background: linear-gradient(93.5deg, #CD9D64 15.12%, #D4B48B 91.47%)
+	// 	// border: 2px solid rgba(255, 255, 255, 0)
+	// 	border: none
+
+	// 	&::after
+	// 		display: block
+
+	// &::after
+	// 	display: none
+	// 	content: ''
+	// 	top: 5px
+	// 	left: 0
+	// 	right: 0
+	// 	transform: translateZ(-1px)
+	// 	background: #B98E5A
+	// 	box-shadow: 0px 10px 20px rgba(219, 173, 119, 0.25)
+	// 	border-radius: 50px
+	// 	position: absolute
+	// 	height: 100%
+	// 	width: 100%
+		
+
+@media screen and (max-width: 540px)
+	section h2
+		font-size: 20px !important
+		line-height: 120% !important

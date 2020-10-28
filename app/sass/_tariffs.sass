@@ -1,0 +1,445 @@
+.tariffs
+    background: radial-gradient(50% 50% at 50% 50%, rgba(248, 248, 248, 0.27) 0%, #F8F8F8 100%)
+    padding-top: 109px
+    padding-bottom: 120px
+    position: relative
+
+    &-controller
+        margin-top: 30px
+        align-items: center
+        z-index: 5
+        display: none
+
+        &-left,
+        &-right
+            cursor: pointer
+            width: 42px
+            border-radius: 50%
+            background: #DAAA72
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+            height: 42px
+            display: flex
+            justify-content: center
+            align-items: center
+
+        &__state
+            padding-left: 0
+            list-style: none
+            margin: 0
+            display: flex
+
+            &-dot
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background: rgba(40, 43, 52, 0.3)
+
+                &:not(:last-child)
+                    margin-right: 10px
+
+                &--active
+                    background-color: $accent
+
+        &-left
+            margin-right: 27px
+
+        &-right
+            margin-left: 27px
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        z-index: 0
+        height: 100%
+        max-width: 1117px
+        width: 100%
+        background: linear-gradient(161.73deg, rgba(248, 248, 248, 0.87) 11.08%, rgba(255, 255, 255, 0) 87.59%), 0% 0% / cover url("../images/dest/tariffs-bg.png")
+
+    .container
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-left: 4px
+
+    &-title
+        font-weight: 500
+        max-width: 538px
+        font-size: 36px
+        z-index: 1
+        line-height: 120%
+        text-align: center
+        color: #202029
+        margin-top: 0
+        margin-bottom: 0
+
+        strong
+            font-weight: 500
+            color: $accent
+
+    &-list
+        position: relative
+        z-index: 1
+        list-style: none
+        padding: 0
+        margin: 0
+        margin-top: 60px
+        display: grid
+        grid-column-gap: 30px
+        grid-template-columns: repeat(3, 1fr)
+        transition: left .6s ease
+        left: 0
+
+        &__tariff
+            padding-top: 46px
+            padding-left: 27px
+            padding-right: 17px
+            display: flex
+            flex-direction: column
+            align-items: center
+            background: #FFFFFF
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1)
+            border-radius: 10px
+            max-height: 605px
+            padding-bottom: 45px
+
+            & > *
+                z-index: 1
+
+            &-title
+                font-weight: 500
+                position: relative
+                right: 5px
+                font-size: 22px
+                line-height: 26px
+                color: #222222
+                margin-bottom: 0
+
+            &-price
+                margin-top: 20px
+                font-weight: normal
+                font-size: 16px
+                line-height: 19px
+                color: #222222
+
+                strong
+                    font-weight: normal
+                    font-size: 22px
+                    line-height: 26px
+                    color: #282B34
+                    position: relative
+                    right: 3px
+                    margin-left: 10px
+                    margin-right: 5px
+
+                span.currency
+                    font-weight: normal
+                    position: relative
+                    right: 7px
+                    font-size: 16px
+                    line-height: 19px
+                    color: #282B34
+                    margin-right: 6px
+
+                span.rate
+                    position: relative
+                    right: 9px
+
+            &-desc
+                max-width: 337px
+                font-weight: normal
+                font-size: 14px
+                line-height: 130%
+                text-align: center
+                color: rgba(40, 43, 52, 0.5)
+                margin-bottom: 0
+                margin-top: 13px
+                position: relative
+                right: 5px
+
+            &-options
+                align-self: flex-start
+                margin-top: 55px
+                font-weight: normal
+                margin-left: 1px
+                font-size: 14px
+                line-height: 100%
+                text-transform: uppercase
+                color: #282B34
+
+                &__list
+                    margin-top: 24px
+                    list-style: none
+                    padding-left: 25px
+                    align-self: flex-start
+
+                    &-item
+                        font-weight: normal
+                        font-size: 16px
+                        line-height: 100%
+                        color: #282B34
+                        position: relative
+
+                        &::before
+                            content: url("../images/dest/list-icon.svg")
+                            position: absolute
+                            left: -24px
+                            top: 1px
+
+                        &:not(:last-child)
+                            margin-bottom: 20px
+
+                        span
+                            font-weight: normal
+                            margin-left: 2px
+                            font-size: 16px
+                            line-height: 100%
+                            color: rgba(40, 43, 52, 0.7)
+                            max-width: 185px
+
+            &-other-text
+                margin-top: 26px
+                font-weight: normal
+                font-size: 14px
+                line-height: 130%
+                text-align: center
+                color: rgba(40, 43, 52, 0.5)
+                align-self: flex-start
+                margin-bottom: 0
+                position: relative
+                right: 11px
+
+            &-btn
+                margin-top: 30px
+                background-color: rgba(0, 0, 0, 0)
+                max-width: 290px
+                width: 100%
+                border: 1px solid $accent
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 100%
+                text-transform: uppercase
+                color: #DAAA72
+                align-self: flex-start
+                margin-left: 10px
+                padding-top: 21px
+                padding-bottom: 21px
+                position: relative
+                transform-style: preserve-3d
+
+                &:not(.btn--main)
+                    &:hover
+                        color: #ffffff
+                        background: linear-gradient(93.5deg, #CD9D64 15.12%, #D4B48B 91.47%)
+                        // border: 2px solid rgba(255, 255, 255, 0)
+                        border: none
+
+                        &::after
+                            display: block
+
+                    &::after
+                        transform: translateZ(-1px)
+                        display: none
+                        content: ''
+                        top: 5px
+                        left: 0
+                        right: 0
+                        transform: translateZ(-1px)
+                        background: #B98E5A
+                        box-shadow: 0px 10px 20px rgba(219, 173, 119, 0.25)
+                        border-radius: 50px
+                        position: absolute
+                        height: 100%
+                        width: 100%
+
+        &__tariff--lider
+            position: relative
+
+            &::before
+                content: 'Лидер продаж'
+                position: absolute
+                top: 0
+                left: 5px
+                right: 5px
+                top: 5px
+                border-top-right-radius: 5px
+                border-top-left-radius: 5px
+                width: calc(100% - 10px)
+                display: flex
+                padding-top: 9px
+                padding-bottom: 9px
+                justify-content: center
+                font-weight: 500
+                font-size: 12px
+                line-height: 14px
+                background-color: rgba(218, 170, 114, 0.5)
+                text-transform: uppercase
+                color: #FFFFFF
+
+
+            &::after
+                content: ''
+                position: absolute
+                height: 100%
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                border-radius: 10px
+                width: 100%
+                border: 5px solid rgba(218, 170, 114, 0.5)
+
+            .tariffs-list__tariff-btn
+                color: #ffffff
+                border: none
+
+        &__tariff-1
+            padding-right: 27px
+
+        &__tariff-2,
+        &__tariff-3
+            padding-left: 28px
+            
+            .tariffs-list__tariff-options
+                margin-top: 37px
+
+        &__tariff-3
+
+            .tariffs-list__tariff-options__list-item:nth-child(1)
+                margin-bottom: 15px
+
+            .tariffs-list__tariff-options__list-item:nth-child(2)
+                margin-bottom: 15px
+
+            .tariffs-list__tariff-options__list-item:nth-child(3)
+                margin-bottom: 17px
+
+            .tariffs-list__tariff-desc
+                max-width: 313px
+
+            .tariffs-list__tariff-other-text
+                margin-top: 13px
+
+@media screen and (max-width: 1230px)
+    .tariffs
+        overflow: hidden
+
+        &-controller
+            display: flex
+
+        &-list
+            width: 300%
+            display: flex
+            justify-content: center
+            margin-left: 15px
+            grid-column-gap: 0px
+
+            &__tariff 
+                max-width: 482px
+                padding-left: 78px
+                padding-right: 88px
+
+                &--lider
+                    margin-left: 500px
+                    margin-right: 500px
+
+@media screen and (max-width: 840px)
+    .tariffs
+        padding-top: 100px
+        padding-bottom: 100px
+
+        &-title
+            max-width: 528px
+
+        &-list
+
+            &__tariff 
+
+                &--lider
+                    margin-left: 200px
+                    margin-right: 200px
+
+
+@media screen and (max-width: 660px)
+    .tariffs
+        padding-top: 60px
+        padding-bottom: 60px
+
+        &-list
+            
+            &__tariff 
+
+                &--lider
+                    margin-left: 100px
+                    margin-right: 100px
+
+@media screen and (max-width: 580px)
+    .tariffs
+
+        &-list
+            margin-top: 40px
+
+            &__tariff 
+                max-width: 380px
+                min-width: 290px
+                padding-left: 20px
+                padding-right: 20px
+
+                &-title
+                    right: 0
+                    left: 0
+
+                &-desc
+                    right: 0
+                    left: 0
+
+                &-other-text
+                    right: 0
+                    left: 0
+
+                &-btn
+                    align-self: center
+                    right: 0
+                    left: 0
+                    margin-left: 0
+
+@media screen and (max-width: 540px)
+    .tariffs-title
+        max-width: 263px
+
+@media screen and (max-width: 470px)
+    .tariffs
+
+        &-list
+
+            &__tariff 
+                max-height: 618px
+                max-height: initial
+                max-width: 290px
+                padding-bottom: 30px
+
+                &-title
+                    font-size: 18px
+                    line-height: 21px
+
+                &-price
+                    font-size: 14px
+                    line-height: 17px
+                    margin-top: 13px
+
+
+                    strong
+                        font-size: 18px
+                        line-height: 21px
+
+                &-btn
+                    font-size: 14px
+                    margin-top: 25px
+                    line-height: 100%
+
+                &-options__list
+                    max-width: 242px
+                   

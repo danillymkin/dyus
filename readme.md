@@ -1,4 +1,7 @@
-<h1>OptimizedHTML 5</h1>
+<h1>Dyus</h1>
+<p>Link to the production version of the site (the ua domain zone requires vpn): <a href="https://dyus.com.ua/?lang=rus">https://dyus.com.ua</a></p>
+
+<h2>OptimizedHTML 5</h1>
 <p>Lightweight startup HTML5 template, based on Gulp.</p>
 
 <p>
